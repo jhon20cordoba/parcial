@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Listado de Clientes Registrados</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Incluir el archivo PHP para obtener los usuarios
+            include('listar_clientes.php');
+
+            // Verificar si hay clientes
+            if (isset($clients) && count($clients) > 0) {
+                foreach ($clients as $client) {
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($client['first_name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($client['last_name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($client['email']) . "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='3'>No hay clientes registrados.</td></tr>";
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
