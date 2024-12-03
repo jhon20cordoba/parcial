@@ -20,11 +20,12 @@
         </thead>
         <tbody>
             <?php
-            // Incluir el archivo PHP para obtener los usuarios
+            
             include('listar_clientes.php');
 
-            // Verificar si hay clientes
-            if (isset($clients) && count($clients) > 0) {
+            // Verificar si la variable $clients está definida y contiene datos
+            if (isset($clients) && is_array($clients) && count($clients)>0) 
+            {
                 foreach ($clients as $client) {
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($client['first_name']) . "</td>";
