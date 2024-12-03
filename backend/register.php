@@ -1,7 +1,7 @@
 <?php
 // Configuración de Supabase
 define('SUPABASE_URL', 'https://isjrytlfjqiqosfnrbft.supabase.co'); 
-define('SUPABASE_API_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzanJ5dGxmanFpcW9zZm5yYmZ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMxOTk4MjgsImV4cCI6MjA0ODc3NTgyOH0.KO0Nm1MQ9gQ-MCgom8Pt2HX25lxR8wXmb8dJ8sAdOAM'); 
+define('SUPABASE_API_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzanJ5dGxmanFpcW9zZm5yYmZ0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMzE5OTgyOCwiZXhwIjoyMDQ4Nzc1ODI4fQ.iwvfCUodF_gh7A1_74x89pyfNRrK3xaALcBHKK-NgOk'); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = trim($_POST['first_name']);
